@@ -122,7 +122,7 @@ def generate_conversation(history, new_input, chat_type):
             types.Content(
                 role="user",
                 parts=[file_part, types.Part.from_text("Hello")]
-        )
+        )]
 
     # Append new user message
     history.append(types.Content(
