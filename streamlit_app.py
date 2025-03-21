@@ -1,7 +1,7 @@
 import streamlit as st
 import pandas as pd
 from datetime import datetime
-from main import generate, clinic_booking  # Your custom Gemini functions
+from utils import generate, clinic_booking  # Your custom Gemini functions
 
 # Load datasets
 @st.cache_data
