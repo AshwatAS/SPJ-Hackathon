@@ -1,79 +1,72 @@
 import streamlit as st
 import pandas as pd
 from datetime import datetime
+from main import generate, clinic_booking  # Your custom Gemini functions
 
 # Load datasets
 @st.cache_data
 def load_data():
     menu = pd.read_csv("restaurant_menu_final_expanded.csv")
-    try:
-        clinic = pd.read_csv("clinic_appointments.csv")
-    except:
-        clinic = pd.DataFrame(columns=["Doctor Name", "Specialization", "Available Date", "Available Time", "Consultation Fee"])
+    clinic = pd.read_csv("clinic_appointments.csv")
     return menu, clinic
 
 menu_df, clinic_df = load_data()
 
-st.title("🍽️ Restaurant & 🏥 Clinic Booking System")
+# Page Setup
+st.set_page_config(page_title="Smart Assistant App", layout="centered")
+st.title("🤖 Smart Assistant: Food Ordering & Clinic Booking")
 
-# Sidebar Navigation
-choice = st.sidebar.radio("Select Service", ["Order Food", "Book Clinic Appointment", "Admin Panel"])
+# Initial Screen
+if "screen" not in st.session_state:
+    st.session_state.screen = "home"
 
-if choice == "Order Food":
-    st.header("Order from Our Restaurant Menu")
-    dietary_pref = st.multiselect("Choose your dietary preference:", ["Vegetarian", "Gluten-Free", "Vegan"])
-    spice_level = st.selectbox("Preferred Spice Level", ["Any", "Mild", "Medium", "Hot", "Extra Spicy"])
-    category = st.multiselect("Select Category", menu_df["Category"].unique())
+# Navigation Handler
+if st.session_state.screen == "home":
+    st.subheader("What would you like to do today?")
+    col1, col2 = st.columns(2)
+    with col1:
+        if st.button("🍽️ Order Food"):
+            st.session_state.screen = "food_chat"
+    with col2:
+        if st.button("🏥 Book Clinic Appointment"):
+            st.session_state.screen = "clinic_chat"
 
-    filtered_menu = menu_df.copy()
-    if "Vegetarian" in dietary_pref:
-        filtered_menu = filtered_menu[filtered_menu["Vegetarian"] == "Yes"]
-    if "Gluten-Free" in dietary_pref:
-        filtered_menu = filtered_menu[filtered_menu["Gluten-Free"] == "Yes"]
-    if "Vegan" in dietary_pref:
-        filtered_menu = filtered_menu[filtered_menu["Vegan"] == "Yes"]
-    if spice_level != "Any":
-        filtered_menu = filtered_menu[filtered_menu["Spice Level"].str.contains(spice_level, case=False)]
-    if category:
-        filtered_menu = filtered_menu[filtered_menu["Category"].isin(category)]
+# Food Chat Interface
+elif st.session_state.screen == "food_chat":
+    st.subheader("🍴 Chat with Food Assistant")
+    st.dataframe(menu_df)
+    if "food_chat_history" not in st.session_state:
+        st.session_state.food_chat_history = []
 
-    st.dataframe(filtered_menu)
+    for chat in st.session_state.food_chat_history:
+        st.chat_message("user").markdown(chat["user"])
+        st.chat_message("assistant").markdown(chat["bot"])
 
-    selected_items = st.multiselect("Select items to order:", filtered_menu["Item Name"].tolist())
-    if selected_items:
-        total_price = filtered_menu[filtered_menu["Item Name"].isin(selected_items)]["Price"].sum()
-        st.success(f"Total Price: ₹{total_price}")
-        if st.button("Confirm Order"):
-            st.balloons()
-            st.success("Order placed! Your food will be ready in approx 20 minutes.")
+    user_input = st.chat_input("Ask about menu, combos, vegan dishes, etc.")
+    if user_input:
+        response = generate(user_input)
+        st.session_state.food_chat_history.append({"user": user_input, "bot": response})
+        st.chat_message("user").markdown(user_input)
+        st.chat_message("assistant").markdown(response)
 
-elif choice == "Book Clinic Appointment":
-    st.header("Book an Appointment at the Clinic")
+    st.button("🔙 Back to Home", on_click=lambda: st.session_state.update({"screen": "home"}))
+
+# Clinic Chat Interface
+elif st.session_state.screen == "clinic_chat":
+    st.subheader("💬 Chat with Clinic Assistant")
     st.dataframe(clinic_df)
+    if "clinic_chat_history" not in st.session_state:
+        st.session_state.clinic_chat_history = []
 
-    doctor_name = st.selectbox("Choose Doctor:", clinic_df["Doctor Name"].unique())
-    selected_doctor = clinic_df[clinic_df["Doctor Name"] == doctor_name]
-    date_selected = st.date_input("Choose Appointment Date:")
+    for chat in st.session_state.clinic_chat_history:
+        st.chat_message("user").markdown(chat["user"])
+        st.chat_message("assistant").markdown(chat["bot"])
 
-    doctor_available = selected_doctor[selected_doctor["Available Date"] == str(date_selected)]
+    user_input = st.chat_input("Ask about doctor availability, fees, appointments...")
+    if user_input:
+        response = clinic_booking(user_input)
+        st.session_state.clinic_chat_history.append({"user": user_input, "bot": response})
+        st.chat_message("user").markdown(user_input)
+        st.chat_message("assistant").markdown(response)
 
-    if not doctor_available.empty:
-        time_slot = st.selectbox("Available Time Slot:", doctor_available["Available Time"].unique())
-        st.success(f"Appointment confirmed with {doctor_name} on {date_selected} at {time_slot}.")
-    else:
-        st.warning("No slots available for the selected doctor on this date.")
-
-elif choice == "Admin Panel":
-    st.header("Upload/Manage Datasets")
-    uploaded_menu = st.file_uploader("Upload Updated Restaurant Menu CSV", type=["csv"])
-    if uploaded_menu:
-        new_menu = pd.read_csv(uploaded_menu)
-        new_menu.to_csv("restaurant_menu_final_expanded.csv", index=False)
-        st.success("New menu uploaded successfully!")
-
-    uploaded_clinic = st.file_uploader("Upload Updated Clinic Appointment CSV", type=["csv"])
-    if uploaded_clinic:
-        new_clinic = pd.read_csv(uploaded_clinic)
-        new_clinic.to_csv("clinic_appointments.csv", index=False)
-        st.success("New clinic data uploaded successfully!")
-
+    st.button("🔙 Back to Home", on_click=lambda: st.session_state.update({"screen": "home"}))
