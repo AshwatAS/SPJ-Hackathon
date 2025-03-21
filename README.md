@@ -3,7 +3,7 @@ DoctorDine
 
 Allows for the booking for a clinical appointment as well as answering questions about the menu.
 
-## Demo App
+## Streamlit App Link
 
 https://spj-hackathon.streamlit.app/
 
