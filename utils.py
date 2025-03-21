@@ -4,7 +4,7 @@ from google import genai
 from google.genai import types
 
 def generate(user_food_question):
-    client = genai.Client(api_key=os.getenv("GEMINI_API_KEY"))
+    client = genai.Client(api_key=os.getenv("AIzaSyAdTTU2UGP0Q9qo7Kq6aqubovcz4FdOZ8Q"))
     
     files = [client.files.upload(file="restaurant_menu_final_expanded.csv")]
     model = "gemini-2.0-flash"
@@ -44,7 +44,7 @@ def generate(user_food_question):
     return "Session ended."
 
 def clinic_booking(user_appointment_query):
-    client = genai.Client(api_key=os.getenv("GEMINI_API_KEY"))
+    client = genai.Client(api_key=os.getenv("AIzaSyAdTTU2UGP0Q9qo7Kq6aqubovcz4FdOZ8Q"))
     
     files = [client.files.upload(file="updated_clinic_appointments.csv")]
     model = "gemini-2.0-flash"
