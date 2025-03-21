@@ -1,7 +1,6 @@
 DoctorDine
 
 
-Description of the app ...
 Allows for the booking for a clinical appointment as well as answering questions about the menu.
 
 ## Demo App
