@@ -47,14 +47,12 @@ def generate(user_food_question):
     return full_string
 
 
-user_question=input("What is your query?:")
-print(generate(user_question))
 
 
 
 def clinic_booking(user_appointment_query):
     client = genai.Client(
-        api_key=os.environ.get("GEMINI_API_KEY"),
+        api_key="AIzaSyAdTTU2UGP0Q9qo7Kq6aqubovcz4FdOZ8Q",
     )
 
     files = [
@@ -93,6 +91,3 @@ def clinic_booking(user_appointment_query):
         full_string=full_string+chunk.text
         
     return full_string
-
-user_question=input("What is your query?:")
-print(clinic_booking(user_question))
