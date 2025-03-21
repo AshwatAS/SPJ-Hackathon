@@ -1,15 +1,21 @@
+# Updated Code
 import base64
 import os
 from google import genai
 from google.genai import types
 
-def generate(user_food_question):
+def generate():
     client = genai.Client(api_key=os.getenv("AIzaSyAdTTU2UGP0Q9qo7Kq6aqubovcz4FdOZ8Q"))
     
     files = [client.files.upload(file="restaurant_menu_final_expanded.csv")]
     model = "gemini-2.0-flash"
     
     while True:
+        user_food_question = input("🧑 You: ")
+        if user_food_question.lower() == "stop":
+            print("🤖 Assistant: Session ended.")
+            break
+        
         contents = [
             types.Content(
                 role="user",
@@ -37,48 +43,3 @@ def generate(user_food_question):
             full_string += chunk.text
         
         print("🤖 Assistant:", full_string)
-        user_food_question = input("🧑 You: ")
-        if user_food_question.lower() == "stop":
-            break
-    
-    return "Session ended."
-
-def clinic_booking(user_appointment_query):
-    client = genai.Client(api_key=os.getenv("AIzaSyAdTTU2UGP0Q9qo7Kq6aqubovcz4FdOZ8Q"))
-    
-    files = [client.files.upload(file="updated_clinic_appointments.csv")]
-    model = "gemini-2.0-flash"
-    
-    while True:
-        contents = [
-            types.Content(
-                role="user",
-                parts=[
-                    types.Part.from_uri(file_uri=files[0].uri, mime_type=files[0].mime_type),
-                    types.Part.from_text(text=user_appointment_query),
-                ],
-            ),
-        ]
-        generate_content_config = types.GenerateContentConfig(
-            temperature=1,
-            top_p=0.95,
-            top_k=40,
-            max_output_tokens=8192,
-            response_mime_type="text/plain",
-            system_instruction=[
-                types.Part.from_text(text="""You are a clinic booking assistant who has to assist customers with booking an appointment based on the data provided to you."""),
-            ],
-        )
-        
-        full_string = ""
-        for chunk in client.models.generate_content_stream(
-            model=model, contents=contents, config=generate_content_config
-        ):
-            full_string += chunk.text
-        
-        print("🤖 Assistant:", full_string)
-        user_appointment_query = input("🧑 You: ")
-        if user_appointment_query.lower() == "stop":
-            break
-    
-    return "Session ended."
