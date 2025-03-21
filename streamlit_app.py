@@ -6,10 +6,9 @@ from utils import generate, clinic_booking  # Your custom Gemini functions
 # Load datasets
 @st.cache_data
 def load_data():
-    menu = pd.read_csv("restaurant_menu_final_expanded.csv")
-    clinic = pd.read_csv("updated_clinic_appointments.csv")
+    menu = pd.read_csv("restaurant_menu_final_expanded.csv")[["Food", "Description"]]
+    clinic = pd.read_csv("updated_clinic_appointments.csv")[["Doctor", "Specialization"]]
     return menu, clinic
-
 menu_df, clinic_df = load_data()
 
 # Page Setup
