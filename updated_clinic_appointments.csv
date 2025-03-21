@@ -1,0 +1,51 @@
+Appointment ID,Patient Name,Doctor Name,Specialization,Date,Time,Consultation Fee,Booking Status
+1,Patient 1,Dr. Brown,Gynecologist,2025-03-21,17:00,80,Available
+2,Patient 2,Dr. Brown,Gynecologist,2025-03-31,12:00,80,Booked
+3,Patient 3,Dr. Ahmed,Orthopedic,2025-03-27,12:00,90,Booked
+4,Patient 4,Dr. Gomez,ENT Specialist,2025-03-21,10:00,65,Available
+5,Patient 5,Dr. Mehta,Dentist,2025-03-26,17:30,75,Available
+6,Patient 6,Dr. Kumar,General Check-Up,2025-03-30,13:00,40,Booked
+7,Patient 7,Dr. Chen,Neurologist,2025-03-25,13:00,130,Available
+8,Patient 8,Dr. Brown,Gynecologist,2025-03-30,16:00,80,Booked
+9,Patient 9,Dr. Brown,Gynecologist,2025-03-24,10:30,80,Available
+10,Patient 10,Dr. Sharma,General Check-Up,2025-03-26,16:30,40,Available
+11,Patient 11,Dr. Gomez,ENT Specialist,2025-03-31,13:00,65,Booked
+12,Patient 12,Dr. Gomez,ENT Specialist,2025-03-28,17:30,65,Booked
+13,Patient 13,Dr. Smith,General Check-Up,2025-03-30,17:00,40,Booked
+14,Patient 14,Dr. Brown,Gynecologist,2025-03-24,17:00,80,Booked
+15,Patient 15,Dr. Kumar,General Check-Up,2025-03-26,14:00,40,Available
+16,Patient 16,Dr. Gomez,ENT Specialist,2025-03-23,12:00,65,Booked
+17,Patient 17,Dr. Mehta,Dentist,2025-03-27,14:30,75,Booked
+18,Patient 18,Dr. Chen,Neurologist,2025-03-26,12:30,130,Available
+19,Patient 19,Dr. Patel,Dermatologist,2025-03-24,11:30,70,Booked
+20,Patient 20,Dr. Lee,Pediatrician,2025-03-30,10:30,60,Available
+21,Patient 21,Dr. Johnson,Cardiologist,2025-03-29,12:00,120,Booked
+22,Patient 22,Dr. Johnson,Cardiologist,2025-03-26,11:00,120,Available
+23,Patient 23,Dr. Chen,Neurologist,2025-03-31,14:30,130,Booked
+24,Patient 24,Dr. Mehta,Dentist,2025-03-28,11:30,75,Booked
+25,Patient 25,Dr. Brown,Gynecologist,2025-03-22,9:30,80,Available
+26,Patient 26,Dr. Brown,Gynecologist,2025-03-25,14:00,80,Booked
+27,Patient 27,Dr. Patel,Dermatologist,2025-03-23,10:00,70,Booked
+28,Patient 28,Dr. Smith,General Check-Up,2025-03-30,12:00,40,Available
+29,Patient 29,Dr. Chen,Neurologist,2025-03-27,13:30,130,Booked
+30,Patient 30,Dr. Gomez,ENT Specialist,2025-03-23,9:00,65,Available
+31,Patient 31,Dr. Ahmed,Orthopedic,2025-03-21,15:30,90,Booked
+32,Patient 32,Dr. Sharma,General Check-Up,2025-03-24,17:00,40,Available
+33,Patient 33,Dr. Brown,Gynecologist,2025-03-21,13:00,80,Available
+34,Patient 34,Dr. Mehta,Dentist,2025-03-23,11:30,75,Available
+35,Patient 35,Dr. Mehta,Dentist,2025-03-30,9:00,75,Available
+36,Patient 36,Dr. Sharma,General Check-Up,2025-03-22,11:00,40,Available
+37,Patient 37,Dr. Sharma,General Check-Up,2025-03-26,15:00,40,Available
+38,Patient 38,Dr. Kapoor,Psychiatrist,2025-03-26,15:00,100,Available
+39,Patient 39,Dr. Brown,Gynecologist,2025-03-22,12:30,80,Available
+40,Patient 40,Dr. Kumar,General Check-Up,2025-03-21,14:30,40,Booked
+41,Patient 41,Dr. Patel,Dermatologist,2025-03-28,9:30,70,Booked
+42,Patient 42,Dr. Lee,Pediatrician,2025-03-24,9:30,60,Booked
+43,Patient 43,Dr. Johnson,Cardiologist,2025-03-29,10:30,120,Booked
+44,Patient 44,Dr. Patel,Dermatologist,2025-03-24,17:30,70,Booked
+45,Patient 45,Dr. Patel,Dermatologist,2025-03-23,11:30,70,Booked
+46,Patient 46,Dr. Kapoor,Psychiatrist,2025-03-27,14:00,100,Available
+47,Patient 47,Dr. Sharma,General Check-Up,2025-03-29,14:00,40,Available
+48,Patient 48,Dr. Ahmed,Orthopedic,2025-03-25,16:30,90,Available
+49,Patient 49,Dr. Ahmed,Orthopedic,2025-03-24,13:00,90,Available
+50,Patient 50,Dr. Chen,Neurologist,2025-03-25,15:00,130,Booked

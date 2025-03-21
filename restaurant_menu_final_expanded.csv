@@ -1,0 +1,31 @@
+Item ID,Item Name,Description,Price,Category,Vegetarian,Gluten-Free,Preparation Time,Combo Meal Option,Combo Meal Price,Preparation Time (min),Vegan,Spice Level,Recommended Combo,Combo Price,Cuisine Type,Calories (kcal),Customer Rating
+1.0,Margherita Pizza,Classic pizza with tomatoes and mozzarella,8.99,Main Course,Yes,No,15.0,Margherita Pizza + Side Dish Combo,58.99,,,,,,Italian,515,4.7
+2.0,Grilled Chicken Salad,Mixed greens with grilled chicken and vinaigrette,10.99,Appetizer,No,Yes,10.0,Grilled Chicken Salad + Side Dish Combo,60.99,,,,,,Mexican,202,3.5
+3.0,Vegetable Stir Fry,Assorted vegetables sautéed in a savory sauce,9.49,Main Course,Yes,Yes,12.0,Vegetable Stir Fry + Side Dish Combo,59.49,,,,,,Thai,522,4.4
+4.0,Chocolate Lava Cake,Warm chocolate cake with a molten center,6.5,Dessert,Yes,No,20.0,N/A,N/A,,,,,,Continental,382,4.0
+5.0,Gluten-Free Pasta Primavera,Pasta with fresh vegetables in a light sauce,11.25,Main Course,Yes,Yes,18.0,Gluten-Free Pasta Primavera + Side Dish Combo,61.25,,,,,,Chinese,602,4.8
+6.0,Caesar Salad,Crisp romaine lettuce with Caesar dressing,7.5,Appetizer,Yes,No,8.0,Caesar Salad + Side Dish Combo,57.5,,,,,,Mexican,261,4.1
+7.0,Beef Tacos,Soft tortillas filled with seasoned beef,9.0,Main Course,No,No,10.0,Beef Tacos + Side Dish Combo,59.0,,,,,,Thai,692,4.9
+8.0,Lemon Herb Salmon,Grilled salmon with lemon and herbs,14.0,Main Course,No,Yes,15.0,Lemon Herb Salmon + Side Dish Combo,64.0,,,,,,Thai,504,3.7
+9.0,Mushroom Risotto,Creamy risotto with wild mushrooms,12.0,Main Course,Yes,No,25.0,Mushroom Risotto + Side Dish Combo,62.0,,,,,,Chinese,490,4.2
+10.0,Tiramisu,Classic Italian dessert with coffee-soaked ladyfingers,5.75,Dessert,Yes,No,30.0,N/A,N/A,,,,,,Fusion,307,3.7
+11.0,Caprese Salad,"Fresh mozzarella, tomatoes, and basil",8.5,Appetizer,Yes,Yes,5.0,Caprese Salad + Side Dish Combo,58.5,,,,,,Mediterranean,286,4.5
+12.0,Chicken Alfredo Pasta,Fettuccine pasta in a creamy Alfredo sauce with chicken,13.5,Main Course,No,No,20.0,Chicken Alfredo Pasta + Side Dish Combo,63.5,,,,,,Indian,697,4.0
+13.0,Veggie Burger,Grilled vegetable patty with lettuce and tomato,9.75,Main Course,Yes,Yes,15.0,Veggie Burger + Side Dish Combo,59.75,,,,,,Thai,525,4.9
+14.0,Shrimp Scampi,Sautéed shrimp in garlic butter sauce over linguine,16.0,Main Course,No,No,12.0,Shrimp Scampi + Side Dish Combo,66.0,,,,,,Italian,544,4.2
+15.0,Greek Salad,"Mixed greens with feta, olives, and cucumbers",8.25,Appetizer,Yes,Yes,7.0,Greek Salad + Side Dish Combo,58.25,,,,,,Mexican,227,3.5
+16.0,BBQ Chicken Pizza,"Pizza topped with BBQ sauce, chicken, and onions",11.0,Main Course,No,No,15.0,BBQ Chicken Pizza + Side Dish Combo,61.0,,,,,,Thai,640,4.3
+17.0,Falafel Wrap,Spiced chickpea patties wrapped in flatbread,8.0,Main Course,Yes,Yes,10.0,Falafel Wrap + Side Dish Combo,58.0,,,,,,Chinese,591,4.1
+18.0,Clam Chowder,Creamy soup with clams and potatoes,7.0,Appetizer,No,No,15.0,Clam Chowder + Side Dish Combo,57.0,,,,,,Mexican,169,3.5
+19.0,Eggplant Parmesan,Breaded eggplant baked with marinara and cheese,10.5,Main Course,Yes,No,25.0,Eggplant Parmesan + Side Dish Combo,60.5,,,,,,Thai,513,4.8
+20.0,Cheesecake,Creamy cheesecake with a graham cracker crust,6.0,Dessert,Yes,No,30.0,N/A,N/A,,,,,,Indian,251,4.3
+,Vegan Buddha Bowl,,220.0,Main Course,Yes,Yes,25.0,,,20.0,Yes,Mild,Vegan Buddha Bowl + Herbal Tea,260.0,Thai,537,5.0
+,Spicy Tofu Stir-Fry,,210.0,Main Course,Yes,Yes,30.0,,,18.0,Yes,Extra Spicy,Spicy Tofu Stir-Fry + Jasmine Rice,250.0,Indian,419,4.7
+,Vegan Chocolate Mousse,,140.0,Dessert,Yes,Yes,5.0,,,10.0,Yes,None,Vegan Chocolate Mousse + Fruit Platter,180.0,Indian,280,4.1
+,Gulab Jamun,,100.0,Dessert,Yes,No,5.0,,,12.0,No,None,Gulab Jamun + Ice Cream,160.0,Fusion,321,4.0
+,Rasmalai,,130.0,Dessert,Yes,Yes,5.0,,,14.0,No,None,Rasmalai + Masala Chai,170.0,Continental,379,4.2
+,Extra Spicy Paneer Tikka,,180.0,Appetizer,Yes,Yes,30.0,,,15.0,No,Extra Spicy,Paneer Tikka + Mint Cooler,230.0,Mediterranean,284,4.6
+,Vegan Mango Pudding,,150.0,Dessert,Yes,Yes,7.0,,,10.0,Yes,None,Mango Pudding + Herbal Tea,190.0,Fusion,219,4.9
+,Masala Chaas,,80.0,Beverage,Yes,Yes,7.0,,,5.0,No,Mild,Masala Chaas + Paneer Roll,220.0,Indian,90,4.5
+,Iced Matcha Latte,,130.0,Beverage,Yes,Yes,30.0,,,6.0,Yes,None,Iced Matcha Latte + Vegan Bowl,300.0,Asian,110,4.7
+,Rose Lemonade,,100.0,Beverage,Yes,Yes,7.0,,,4.0,Yes,None,Rose Lemonade + Falafel Wrap,250.0,Mediterranean,85,4.6
