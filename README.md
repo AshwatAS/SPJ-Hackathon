@@ -7,7 +7,7 @@ Description of the app ...
 
 ## Demo App
 
-[![Streamlit App](https://spj-hackathon.streamlit.app/))]
+https://spj-hackathon.streamlit.app/
 
 ## GitHub Codespaces
 
