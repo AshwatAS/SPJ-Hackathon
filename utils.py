@@ -111,18 +111,25 @@ def generate_conversation(history, new_input, chat_type):
     # Create configuration based on chat type
     if chat_type == "food":
         system_instruction = "You are a restaurant assistant helping with menu questions and meal recommendations."
-        file_part = types.Part.from_uri(menu_file.uri, menu_file.mime_type)
+        file_part = types.Part.from_uri(
+            file_uri=menu_file.uri,  # Use keyword argument
+            mime_type=menu_file.mime_type  # Use keyword argument
+        )
     else:
         system_instruction = "You are a clinic booking assistant helping with appointment scheduling."
-        file_part = types.Part.from_uri(clinic_file.uri, clinic_file.mime_type)
+        file_part = types.Part.from_uri(
+            file_uri=clinic_file.uri,  # Use keyword argument
+            mime_type=clinic_file.mime_type  # Use keyword argument
+        )
 
     # Add initial file context if first message
     if not history:
         history = [
             types.Content(
                 role="user",
-                parts=[file_part, types.Part.from_text("Hello")]
-        )]
+                parts=[file_part, types.Part.from_text(text="Hello")]
+            )
+        ]
 
     # Append new user message
     history.append(types.Content(
