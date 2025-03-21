@@ -7,7 +7,7 @@ from utils import generate, clinic_booking  # Your custom Gemini functions
 @st.cache_data
 def load_data():
     menu = pd.read_csv("restaurant_menu_final_expanded.csv")
-    clinic = pd.read_csv("clinic_appointments.csv")
+    clinic = pd.read_csv("updated_clinic_appointments.csv")
     return menu, clinic
 
 menu_df, clinic_df = load_data()
