@@ -7,17 +7,15 @@ Allows for the booking for a clinical appointment as well as answering questions
 
 https://spj-hackathon.streamlit.app/
 
-## GitHub Codespaces
+## Dataset Names
+restaurant_menu_final_expanded.csv
+updated_clinical-appointments.csv
 
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/streamlit/app-starter-kit?quickstart=1)
 
-## Section Heading
+## Other Resources used
 
-This is filler text, please replace this with text for this section.
+The file names with the source code of the app are listed below
+- streamlit_app.py
+- utils.py
 
-## Further Reading
-
-This is filler text, please replace this with a explanatory text about further relevant resources for this repo
-- Resource 1
-- Resource 2
-- Resource 3
+- requirements.txt- includes the libraries required for the code to function
