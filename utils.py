@@ -98,7 +98,7 @@ from google.genai import types
 import os
 
 # Initialize clients and upload files once
-client = genai.Client(api_key=os.environ.get("GEMINI_API_KEY"))
+client = genai.Client(api_key="AIzaSyAdTTU2UGP0Q9qo7Kq6aqubovcz4FdOZ8Q")
 
 # Upload files and store references
 menu_file = client.files.upload(file="restaurant_menu_final_expanded.csv")
