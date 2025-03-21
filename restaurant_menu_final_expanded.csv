@@ -21,11 +21,8 @@ Item ID,Item Name,Description,Price,Category,Vegetarian,Gluten-Free,Preparation 
 20.0,Cheesecake,Creamy cheesecake with a graham cracker crust,6.0,Dessert,Yes,No,30.0,N/A,N/A,,,,,,Indian,251,4.3
 ,Vegan Buddha Bowl,,220.0,Main Course,Yes,Yes,25.0,,,20.0,Yes,Mild,Vegan Buddha Bowl + Herbal Tea,260.0,Thai,537,5.0
 ,Spicy Tofu Stir-Fry,,210.0,Main Course,Yes,Yes,30.0,,,18.0,Yes,Extra Spicy,Spicy Tofu Stir-Fry + Jasmine Rice,250.0,Indian,419,4.7
-,Vegan Chocolate Mousse,,140.0,Dessert,Yes,Yes,5.0,,,10.0,Yes,None,Vegan Chocolate Mousse + Fruit Platter,180.0,Indian,280,4.1
-,Gulab Jamun,,100.0,Dessert,Yes,No,5.0,,,12.0,No,None,Gulab Jamun + Ice Cream,160.0,Fusion,321,4.0
-,Rasmalai,,130.0,Dessert,Yes,Yes,5.0,,,14.0,No,None,Rasmalai + Masala Chai,170.0,Continental,379,4.2
+,Vegan Chocolate Mousse,,14.0,Dessert,Yes,Yes,5.0,,,10.0,Yes,None,Vegan Chocolate Mousse + Fruit Platter,180.0,Indian,280,4.1
 ,Extra Spicy Paneer Tikka,,180.0,Appetizer,Yes,Yes,30.0,,,15.0,No,Extra Spicy,Paneer Tikka + Mint Cooler,230.0,Mediterranean,284,4.6
-,Vegan Mango Pudding,,150.0,Dessert,Yes,Yes,7.0,,,10.0,Yes,None,Mango Pudding + Herbal Tea,190.0,Fusion,219,4.9
 ,Masala Chaas,,80.0,Beverage,Yes,Yes,7.0,,,5.0,No,Mild,Masala Chaas + Paneer Roll,220.0,Indian,90,4.5
 ,Iced Matcha Latte,,130.0,Beverage,Yes,Yes,30.0,,,6.0,Yes,None,Iced Matcha Latte + Vegan Bowl,300.0,Asian,110,4.7
 ,Rose Lemonade,,100.0,Beverage,Yes,Yes,7.0,,,4.0,Yes,None,Rose Lemonade + Falafel Wrap,250.0,Mediterranean,85,4.6
