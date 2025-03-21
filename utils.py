@@ -112,14 +112,14 @@ def generate_conversation(history, new_input, chat_type):
     if chat_type == "food":
         system_instruction = "You are a restaurant assistant helping with menu questions and meal recommendations."
         file_part = types.Part.from_uri(
-            file_uri=menu_file.uri,  # Use keyword argument
-            mime_type=menu_file.mime_type  # Use keyword argument
+            file_uri=menu_file.uri,
+            mime_type=menu_file.mime_type
         )
     else:
         system_instruction = "You are a clinic booking assistant helping with appointment scheduling."
         file_part = types.Part.from_uri(
-            file_uri=clinic_file.uri,  # Use keyword argument
-            mime_type=clinic_file.mime_type  # Use keyword argument
+            file_uri=clinic_file.uri,
+            mime_type=clinic_file.mime_type
         )
 
     # Add initial file context if first message
@@ -127,14 +127,17 @@ def generate_conversation(history, new_input, chat_type):
         history = [
             types.Content(
                 role="user",
-                parts=[file_part, types.Part.from_text(text="Hello")]
+                parts=[
+                    file_part,
+                    types.Part.from_text(text="Hello")  # Fixed here
+                ]
             )
         ]
 
     # Append new user message
     history.append(types.Content(
         role="user",
-        parts=[types.Part.from_text(new_input)]
+        parts=[types.Part.from_text(text=new_input)]  # Fixed here
     ))
 
     # Generate response
@@ -142,7 +145,7 @@ def generate_conversation(history, new_input, chat_type):
         temperature=0.9,
         top_p=0.95,
         max_output_tokens=8192,
-        system_instruction=system_instruction
+        system_instruction=types.Part.from_text(text=system_instruction)  # Fixed here
     )
 
     full_response = ""
@@ -156,7 +159,7 @@ def generate_conversation(history, new_input, chat_type):
     # Append assistant response to history
     history.append(types.Content(
         role="model",
-        parts=[types.Part.from_text(full_response)]
+        parts=[types.Part.from_text(text=full_response)]  # Fixed here
     ))
 
     return full_response, history
