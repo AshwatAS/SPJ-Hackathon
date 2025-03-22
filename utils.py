@@ -15,7 +15,7 @@ model = "gemini-2.0-flash"
 def generate_conversation(history, new_input, chat_type):
     # Create configuration based on chat type
     if chat_type == "food":
-        system_instruction = "You are a restaurant assistant helping with menu questions and meal recommendations."
+        system_instruction = "You are a restaurant assistant who has to use the resturant menu to answer the customer's questions. You can also suggest suitable meal combos to customers according to their needs. Whatever you note down will be ordered."
         file_part = types.Part.from_uri(
             file_uri=menu_file.uri,
             mime_type=menu_file.mime_type
